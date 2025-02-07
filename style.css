@@ -1,0 +1,135 @@
+:root {
+    --answer-bg-light: #f0f0f0;
+    --answer-bg-dark: #1e1e1e;
+    --answer-text-light: #000000;
+    --answer-text-dark: #ffffff;
+
+    --toggle-bg-light: #e0e0e0;
+    --toggle-bg-dark: #333333;
+    --toggle-hover-light: #cccccc;
+    --toggle-hover-dark: #444444;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: #ffffff;
+    color: #000000;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-theme {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+/* Кнопка перемикання теми */
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--toggle-bg-light);
+    border: 2px solid #000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 24px;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.theme-toggle:hover {
+    background-color: var(--toggle-hover-light);
+    transform: scale(1.1);
+}
+
+body.dark-theme .theme-toggle {
+    background-color: var(--toggle-bg-dark);
+    border-color: #fff;
+    color: #fff;
+}
+
+body.dark-theme .theme-toggle:hover {
+    background-color: var(--toggle-hover-dark);
+}
+
+/* Основні стилі гри */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vh;
+}
+
+.main {
+    display: none;
+}
+
+.question {
+    font-size: 100px;
+}
+
+.ans-row {
+    display: flex;
+    box-sizing: border-box;
+}
+
+.container_h3 {
+    margin-bottom: 10px;
+}
+
+.answer {
+    width: 65px;
+    height: 65px;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background-color: var(--answer-bg-light);
+    color: var(--answer-text-light);
+    transition: background 0.3s, color 0.3s;
+}
+
+body.dark-theme .answer {
+    background-color: var(--answer-bg-dark);
+    color: var(--answer-text-dark);
+    border-color: #ffffff;
+}
+
+.start-btn {
+    font-size: 30px;
+    padding: .5em;
+    border: 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+    background-color: #eaeaea;
+    transition: background 0.3s, color 0.3s;
+}
+
+.start-btn:hover {
+    background: #d0d0d0;
+}
+
+body.dark-theme .start-btn {
+    background-color: #333333;
+    color: #ffffff;
+    border-color: #ffffff;
+}
+
+body.dark-theme .start-btn:hover {
+    background-color: #444444;
+}
